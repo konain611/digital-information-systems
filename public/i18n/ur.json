@@ -5,11 +5,29 @@
     "products": "پروڈکٹس",
     "media": "میڈیا",
     "dgenterprise": "ڈی جی انٹرپرائز",
-    "logoLabel": "کمپنی"
+    "logoLabel": "کمپنی",
+    "dropdown": {
+      "company": {
+        "about-us": "ہمارے بارے میں",
+        "strategy": "حکمتِ عملی",
+        "contact-us": "ہم سے رابطہ کریں"
+      },
+      "services": {
+        "detection-and-response": "پتہ لگانا اور ردِعمل",
+        "assesment": "جائزہ",
+        "managed": "منیجڈ سروسز",
+        "cloud": "کلاؤڈ"
+      },
+      "products": {
+        "security-challenge": "سیکیورٹی چیلنج",
+        "education": "تعلیم",
+        "cloud-security": "کلاؤڈ سیکیورٹی",
+        "technology": "ٹیکنالوجی",
+        "news-updates": "خبری اپڈیٹس"
+      }
+    }
   },
   "home": {
     "welcome": "ہوم پیج پر خوش آمدید"
   }
 }
-
-

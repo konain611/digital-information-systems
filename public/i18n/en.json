@@ -5,7 +5,27 @@
     "products": "Products",
     "media": "Media",
     "dgenterprise": "DGEnterprise",
-    "logoLabel": "Company"
+    "logoLabel": "Company",
+    "dropdown": {
+      "company": {
+        "about-us": "About us",
+        "strategy": "Strategy",
+        "contact-us": "Contact Us"
+      },
+      "services": {
+        "detection-and-response": "Detection & Response",
+        "assesment": "Assesment",
+        "managed": "Managed",
+        "cloud": "Cloud"
+      },
+      "products": {
+        "security-challenge": "Security Challenge",
+        "education": "Education",
+        "cloud-security": "Cloud Security",
+        "technology": "Technology",
+        "news-updates": "News Updates"
+      }
+    }
   },
   "home": {
     "welcome": "Welcome to homepage"

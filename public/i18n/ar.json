@@ -5,11 +5,29 @@
     "products": "المنتجات",
     "media": "الإعلام",
     "dgenterprise": "دي جي إنتربرايز",
-    "logoLabel": "الشركة"
+    "logoLabel": "الشركة",
+    "dropdown": {
+      "company": {
+        "about-us": "معلومات عنا",
+        "strategy": "الاستراتيجية",
+        "contact-us": "اتصل بنا"
+      },
+      "services": {
+        "detection-and-response": "الكشف والاستجابة",
+        "assesment": "التقييم",
+        "managed": "الخدمات المُدارة",
+        "cloud": "السحابة"
+      },
+      "products": {
+        "security-challenge": "تحدي الأمن",
+        "education": "التعليم",
+        "cloud-security": "أمن السحابة",
+        "technology": "التكنولوجيا",
+        "news-updates": "آخر الأخبار"
+      }
+    }
   },
   "home": {
     "welcome": "مرحبًا بك في الصفحة الرئيسية"
   }
 }
-
-
