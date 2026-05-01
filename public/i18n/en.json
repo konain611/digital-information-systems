@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "company": "Company",
+    "services": "Services",
+    "products": "Products",
+    "media": "Media",
+    "dgenterprise": "DGEnterprise",
+    "logoLabel": "Company"
+  },
+  "home": {
+    "welcome": "Welcome to homepage"
+  }
+}
+
+
