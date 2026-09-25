@@ -1,0 +1,213 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "solutions": "Solutions",
+    "ecosystem": "Ecosystem",
+    "platforms": "Platforms",
+    "research": "Research",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "DIGINFO",
+    "headline": "Secure, intelligent and resilient digital capability.",
+    "supporting": "DIGINFO brings together cybersecurity, AI, cloud, engineering, research, education and enterprise assurance to help organizations build trusted digital growth.",
+    "primary": "Speak with DIGINFO",
+    "secondary": "Explore platforms"
+  },
+  "section": {
+    "aboutEyebrow": "Who we are",
+    "aboutTitle": "A technology and cybersecurity ecosystem designed for continuity, trust and long-term value.",
+    "aboutBody": "DIGINFO operates as a serious digital ecosystem company. It connects product engineering, secure cloud modernization, research, education, governance and platform services into a single long-term capability model for public and private organizations.",
+    "aboutBodyTwo": "The focus is not only on protection. It is on building the systems, teams, intelligence and operating models needed to innovate responsibly and grow securely in a changing digital environment.",
+    "pillars": {
+      "strategy": "Strategic technology direction",
+      "security": "Cybersecurity and resilience",
+      "intelligence": "AI with human accountability",
+      "ecosystem": "Platform and talent ecosystem"
+    }
+  },
+  "outcomes": {
+    "eyebrow": "Business outcomes",
+    "title": "What organizations need to continue, adapt and grow securely.",
+    "continuityTitle": "Business Continuity",
+    "continuityDescription": "Operating models and secure technology foundations that reduce disruption and keep critical mission capability resilient.",
+    "intelligenceTitle": "AI-Powered Intelligence",
+    "intelligenceDescription": "Designed to turn relevant data, knowledge and operational insight into informed decisions without removing human oversight.",
+    "innovationTitle": "Technology Innovation",
+    "innovationDescription": "Product thinking, engineering rigor and research-led development that makes technology more useful, secure and adaptive.",
+    "growthTitle": "Secure Growth",
+    "growthDescription": "A measured path to digital modernization, platform adoption and business enablement grounded in assurance and governance."
+  },
+  "ecosystem": {
+    "eyebrow": "DIGINFO ecosystem",
+    "title": "Shared foundations. Distinct platforms. One enterprise architecture.",
+    "subtitle": "DIGINFO brings together public and commercial platforms, shared core systems, community initiatives and a disciplined engineering organization that reinforces the wider capability model.",
+    "shared": "Shared core systems",
+    "public": "Public and commercial platforms",
+    "community": "Community and growth initiatives",
+    "engineering": "Engineering organization"
+  },
+  "sharedPlatforms": {
+    "eyebrow": "Core shared platforms",
+    "title": "The foundations behind DIGINFO's digital ecosystem.",
+    "dbrain":"DGBRAIN — intelligence, knowledge and decision infrastructure.",
+    "dghub":"DGHUB — coordination and collaboration across the ecosystem.",
+    "dgenterprise":"DGEnterprise — enterprise-grade capability, governance and operating support.",
+    "dgshop":"DGSHOP — commerce, digital exposure and market-facing capability.",
+    "dgNexus":"DG Nexus — connected capability and platform integration layer.",
+    "lms":"Advanced LMS — structured learning, skills and workforce capability."
+  },
+  "flagship": {
+    "eyebrow": "Flagship platforms",
+    "title": "Selected platforms that connect knowledge, trust and digital capability.",
+    "dbrain": "DGBRAIN",
+    "dbrainText": "Knowledge, research and intelligence enablement for digital decision-making.",
+    "dgmagazine": "DGMAGAZINE",
+    "dgmagazineText": "Editorial and knowledge platform for technology, security and ecosystem insight.",
+    "dgacademy": "DGACADEMY",
+    "dgacademyText": "Learning pathways and high-value upskilling across technology and security disciplines.",
+    "dgcloud": "DGCLOUD",
+    "dgcloudText": "Cloud enablement and platform architecture designed for resilience and scale.",
+    "threatassurance": "THREATASSURANCE",
+    "threatassuranceText": "Security visibility, assurance and informed decision support grounded in research and evaluation.",
+    "dglabs": "DGLABS",
+    "dglabsText": "Research, experimentation and proof-of-value work for emerging technology and security needs.",
+    "nativeSecurity": "NATIVESECURITY / DG NSOS",
+    "nativeSecurityText": "Secure operating capability and native security models designed for modern digital environments."
+  },
+  "capabilities": {
+    "eyebrow": "What DIGINFO does",
+    "title": "Business capabilities spanning security, technology and growth enablement.",
+    "resilience": "Cyber Resilience",
+    "transformation": "Secure Digital Transformation",
+    "modernization": "Cloud & Platform Modernization",
+    "assurance": "Governance, Risk & Assurance",
+    "ai": "AI & Intelligence Services",
+    "education": "Education & Workforce Development",
+    "manufacturing": "Technology Manufacturing & Product Innovation",
+    "growth": "Business Continuity & Growth Enablement"
+  },
+  "solutions": {
+    "eyebrow": "Solutions",
+    "title": "Focused solution areas helping organizations secure and modernize with confidence.",
+    "assessment": "Security Assessment & Penetration Testing",
+    "consulting": "Cybersecurity Consulting & Advisory",
+    "grc": "Governance, Risk & Compliance",
+    "managed": "Managed Security Services",
+    "cloud": "Cloud, Virtualization & Platform Modernization",
+    "training": "Professional Training & Certification",
+    "evaluation": "Product Evaluation, Research & Buyer Guides",
+    "poc": "POC-as-a-Service",
+    "continuity": "Business Continuity & Disaster Recovery",
+    "awareness": "Security Awareness & Workforce Development"
+  },
+  "industries": {
+    "eyebrow": "Industries",
+    "title": "DIGINFO supports organizations operating in environments where trust, continuity and assurance are mission-critical.",
+    "government": "Government & Public Sector",
+    "banking": "Banking & Finance",
+    "telecom": "Telecom",
+    "healthcare": "Healthcare",
+    "education": "Education",
+    "infrastructure": "Critical Infrastructure",
+    "enterprise": "Enterprise & Technology",
+    "manufacturing": "Manufacturing & Industrial"
+  },
+  "aiTrust": {
+    "eyebrow": "Security & responsible AI",
+    "title": "Human-governed intelligence, secure-by-design delivery and accountable decision-making.",
+    "body": "DIGINFO is deliberate about how AI is used. The model is supportive, not autonomous. Human teams review and approve material outputs, while secure architecture, governance and continuous improvement remain central to responsible adoption.",
+    "securityByDesign": "Security by Design",
+    "humanGoverned": "Human-Governed Intelligence",
+    "auditability": "Auditability",
+    "resilience": "Resilience",
+    "privacy": "Privacy & Data Boundaries",
+    "improvement": "Continuous Improvement"
+  },
+  "innovatech": {
+    "eyebrow": "DIGINFO INNOVATECH",
+    "title": "The permanent internal engine for product engineering and secure delivery.",
+    "productEngineering": "Product Engineering",
+    "devsecops": "DevSecOps",
+    "quality": "Quality Engineering",
+    "sre": "SRE & Operations",
+    "architecture": "Architecture Governance",
+    "ip": "IP & Knowledge Ownership"
+  },
+  "research": {
+    "eyebrow": "DGLABS / Research & innovation",
+    "title": "Research, evaluation and prototyping connected to real product and growth priorities.",
+    "cyber": "Cyber Research",
+    "evaluation": "Product Evaluation",
+    "poc": "Prototype & POC",
+    "bounty": "Bug Bounty Validation",
+    "support": "DGBRAIN support",
+    "pipeline": "Innovation Pipeline"
+  },
+  "talent": {
+    "eyebrow": "DG Care / Talent",
+    "title": "Structured learning and skill development that leads to career growth and real capability.",
+    "learning": "Structured Learning",
+    "practice": "Controlled Practice",
+    "mentoring": "Mentoring",
+    "work": "Real Work",
+    "outcomes": "Verified Outcomes",
+    "pathways": "Career & Growth Pathways"
+  },
+  "why": {
+    "eyebrow": "Why DIGINFO",
+    "title": "The combination of business understanding, technology depth and responsible delivery.",
+    "business": "Business Understanding",
+    "cyber": "Cybersecurity DNA",
+    "technology": "Own Technology",
+    "accountability": "AI with Accountability",
+    "research": "Research to Product",
+    "talent": "Talent Ecosystem",
+    "architecture": "Unified Architecture",
+    "ownership": "Long-Term Ownership"
+  },
+  "team": {
+    "eyebrow": "Management & team",
+    "title": "Leadership across strategy, technology, operations, compliance and ecosystem growth.",
+    "founder": "Muhammad Saleem — Founder & CEO",
+    "cto": "Muhammad Saeed — Co-Founder & CTO",
+    "hr": "Gohar Khalid — Director, HR & Administration",
+    "strategy": "Mirza Furqan Baig — COO / Director, Strategy & Planning",
+    "editor": "Dr. Ashfaq A. Malik — Chief Editor, DGMAGAZINE",
+    "legal": "Kausar Fecto — Director, Legal & Compliance",
+    "marketing": "Muhammad Akmal Khan — Head of Marketing & Finance",
+    "content": "Hamed Mohiuddin — Head of Content Strategy & Writer"
+  },
+  "customers": {
+    "eyebrow": "Customers",
+    "title": "Selected organizations and sectors supported through trusted digital capability.",
+    "info": "Government institutions, enterprise organizations, regulated businesses and infrastructure-focused operators are among the sectors DIGINFO works with in support of secure modernization and continuity."
+  },
+  "testimonials": {
+    "eyebrow": "Customer testimonials",
+    "title": "Trusted collaboration built around practical outcomes, clarity and operational confidence.",
+    "quoteOne": "We value DIGINFO's understanding of both business needs and technical realities. Their approach helps us secure innovation without losing momentum.",
+    "quoteTwo": "Their work brings together strategy, execution and operational discipline in a way that is rare in digital transformation engagements.",
+    "quoteThree": "DIGINFO has been a dependable partner in helping us strengthen resilience, trust and platform maturity across critical capabilities.",
+    "attributionOne": "Leadership stakeholder, enterprise environment",
+    "attributionTwo": "Program sponsor, regulated sector",
+    "attributionThree": "Technology and operational leadership, critical infrastructure"
+  },
+  "cta": {
+    "eyebrow": "Build the next chapter",
+    "title": "Secure, intelligent and resilient digital capability with DIGINFO.",
+    "supporting": "DIGINFO helps organizations move from fragmented digital operations to a trusted, integrated and future-ready technology model.",
+    "primary": "Contact DIGINFO",
+    "secondary": "Review platform ecosystem"
+  },
+  "footer": {
+    "identity": "DIGINFO",
+    "address": "Karachi, Pakistan",
+    "secondAddress": "Riyadh, Saudi Arabia",
+    "phone": "+9234325505",
+    "email": "info@diginfo.net",
+    "website": "https://diginfo.net",
+    "magazine": "https://dgmagazine.net"
+  }
+}
