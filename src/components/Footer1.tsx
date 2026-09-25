@@ -1,121 +1,79 @@
 "use client";
 
 import Image from "next/image";
+import { ArrowUpRight, Globe, Mail, MapPin, Phone } from "lucide-react";
+import { usePathname } from "next/navigation";
+import LocalizedLink from "@/components/localized-link";
 import { useTranslationsClient } from "@/lib/i18n/client";
 import { detectLocale } from "@/lib/i18n/utils";
-import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 
 export default function Footer1() {
-  const locale = detectLocale(typeof window !== "undefined" ? window.location.pathname : "/");
+  const pathname = usePathname() || "/";
+  const locale = detectLocale(pathname);
   const t = useTranslationsClient(locale);
-  const isRTL = locale === "ur" || locale === "ar";
-
-  const socialLinks = {
-    facebook: "#",
-    instagram: "#", 
-    twitter: "#",
-    linkedin: "#"
-  };
 
   return (
-    <>
-      <style jsx>{`
-        @keyframes slideInLeft {
-          from {
-            opacity: 0;
-            transform: translateX(-50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        
-        @keyframes slideInRight {
-          from {
-            opacity: 0;
-            transform: translateX(50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        
-        .animate-slide-in-left {
-          animation: slideInLeft 0.8s ease-out;
-        }
-        
-        .animate-slide-in-right {
-          animation: slideInRight 0.8s ease-out;
-        }
-      `}</style>
-      <footer className="relative w-full bg-[#003366] overflow-hidden">
-      {/* Flashlight effect background */}
-      <div 
-        className="absolute inset-0 opacity-30"
-        style={{
-          background: `radial-gradient(ellipse 300px 150px at ${isRTL ? '15% 40%' : '85% 40%'}, rgba(255, 145, 2, 0.25) 0%, rgba(255, 145, 2, 0.1) 30%, transparent 70%)`
-        }}
-      />
-      
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
-        <div className={`flex flex-col lg:flex-row items-center justify-between gap-12 `}>
-          
-          {/* Logo Section */}
-          <div className="flex items-center animate-slide-in-left">
-            <div className="relative">
-              <Image
-                src="/logo-2.png"
-                alt="DIGINFO"
-                width={360}
-                height={180}
-                className="object-contain"
-              />
-            </div>
-          </div>
+    <footer className="bg-[#001d33] text-slate-200">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-8 sm:px-6 lg:grid-cols-[1.3fr_0.7fr_0.7fr_1.1fr] lg:px-8">
+        <div className="space-y-5">
+          <Image src="/logo-2.png" alt="DIGINFO logo" width={220} height={100} className="h-auto w-56 object-contain" />
+          <p className="max-w-md text-sm leading-7 text-slate-300">
+            Secure, intelligent and resilient digital capability through engineering, assurance, research and platform modernization.
+          </p>
+        </div>
 
-          {/* Text and Social Media Section */}
-          <div className={`flex flex-col items-center lg:items-end gap-6 text-center lg:text-right ${isRTL ? 'lg:text-left' : ''} animate-slide-in-right`}>
-            <p className="text-white max-w-md leading-relaxed">
-              Developing personalize our customer journeys to increase satisfaction & loyalty of our expansion. Bexon has been a game.
-            </p>
-            
-            {/* Social Media Icons */}
-            <div className={`flex gap-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
-              <a 
-                href={socialLinks.facebook}
-                className="w-10 h-10 rounded-full border-2 border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-[#003366] transition-all duration-300"
-                aria-label="Facebook"
-              >
-                <Facebook size={18} />
-              </a>
-              <a 
-                href={socialLinks.instagram}
-                className="w-10 h-10 rounded-full border-2 border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-[#003366] transition-all duration-300"
-                aria-label="Instagram"
-              >
-                <Instagram size={18} />
-              </a>
-              <a 
-                href={socialLinks.twitter}
-                className="w-10 h-10 rounded-full border-2 border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-[#003366] transition-all duration-300"
-                aria-label="Twitter"
-              >
-                <Twitter size={18} />
-              </a>
-              <a 
-                href={socialLinks.linkedin}
-                className="w-10 h-10 rounded-full border-2 border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-[#003366] transition-all duration-300"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={18} />
-              </a>
-            </div>
+        <div className="space-y-4">
+          <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-200">Navigation</h3>
+          <ul className="space-y-3 text-sm text-slate-300 font-medium">
+            <li><LocalizedLink href="/about" className="hover:text-[#FF9102]">About</LocalizedLink></li>
+            <li><LocalizedLink href="/solutions" className="hover:text-[#FF9102]">Solutions</LocalizedLink></li>
+            <li><LocalizedLink href="/ecosystem" className="hover:text-[#FF9102]">Ecosystem</LocalizedLink></li>
+            <li><LocalizedLink href="/platforms" className="hover:text-[#FF9102]">Platforms</LocalizedLink></li>
+          </ul>
+        </div>
+
+        <div className="space-y-4">
+          <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-200">Platforms</h3>
+          <ul className="space-y-3 text-sm text-slate-300 font-medium">
+            <li><LocalizedLink href="/platforms/dbrain" className="hover:text-[#FF9102]">DGBRAIN</LocalizedLink></li>
+            <li><LocalizedLink href="/platforms/dgmagazine" className="hover:text-[#FF9102]">DGMAGAZINE</LocalizedLink></li>
+            <li><LocalizedLink href="/platforms/dgacademy" className="hover:text-[#FF9102]">DGACADEMY</LocalizedLink></li>
+            <li><LocalizedLink href="/platforms/dgcloud" className="hover:text-[#FF9102]">DGCLOUD</LocalizedLink></li>
+          </ul>
+        </div>
+
+        <div className="space-y-4">
+          <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-200">Contact</h3>
+          <ul className="space-y-3 text-sm text-slate-300 font-medium">
+            <li className="flex items-start gap-3">
+              <MapPin className="mt-0.5 h-4 w-4 text-slate-400" />
+              <span>Karachi, Pakistan • Riyadh, Saudi Arabia</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <Phone className="h-4 w-4 text-slate-400" />
+              <a href="tel:+9234325505" className="hover:text-white">{t("footer.phone")}</a>
+            </li>
+            <li className="flex items-center gap-3">
+              <Mail className="h-4 w-4 text-slate-400" />
+              <a href="mailto:info@diginfo.net" className="hover:text-white">{t("footer.email")}</a>
+            </li>
+            <li className="flex items-center gap-3">
+              <Globe className="h-4 w-4 text-slate-400" />
+              <a href="https://diginfo.net" target="_blank" rel="noreferrer" className="hover:text-white">diginfo.net</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-white/10">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-5 text-xs text-slate-300 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+          <p>© 2025. Secure, intelligent and resilient digital capability.</p>
+          <div className="flex items-center gap-3">
+            <a href="https://diginfo.net" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 hover:text-white">diginfo.net <ArrowUpRight className="h-3.5 w-3.5" /></a>
+            <a href="https://dgmagazine.net" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 hover:text-white">dgmagazine.net <ArrowUpRight className="h-3.5 w-3.5" /></a>
           </div>
         </div>
       </div>
     </footer>
-    </>
   );
 }
