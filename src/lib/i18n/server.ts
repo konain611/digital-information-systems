@@ -2,15 +2,26 @@ import { readFile } from "fs/promises";
 import { join } from "path";
 import type { Locale, TranslationFunction } from "./types";
 
-const cache = new Map<Locale, any>();
+type JsonPrimitive = string | number | boolean | null;
+type JsonValue = JsonPrimitive | Record<string, unknown> | unknown[];
 
-function getNestedValue(obj: any, path: string): string {
+const cache = new Map<Locale, Record<string, unknown>>();
+
+function getNestedValue(obj: Record<string, unknown>, path: string): string {
   const keys = path.split(".");
-  let value = obj;
+  let value: unknown = obj;
+
   for (const key of keys) {
-    value = value?.[key];
-    if (value === undefined) return path;
+    if (typeof value !== "object" || value === null || Array.isArray(value)) {
+      return path;
+    }
+
+    value = (value as Record<string, unknown>)[key];
+    if (value === undefined) {
+      return path;
+    }
   }
+
   return typeof value === "string" ? value : path;
 }
 
@@ -21,9 +32,9 @@ export async function getTranslations(locale: Locale): Promise<TranslationFuncti
   }
 
   try {
-    const filePath = join(process.cwd(), "public", "i18n", `${locale}.json`);
+    const filePath = join(process.cwd(), "public", "locale", `${locale}.json`);
     const fileContents = await readFile(filePath, "utf-8");
-    const translations = JSON.parse(fileContents);
+    const translations = JSON.parse(fileContents) as Record<string, unknown>;
     cache.set(locale, translations);
     return (key: string) => getNestedValue(translations, key);
   } catch {

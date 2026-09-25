@@ -1,17 +1,25 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Locale, Translations, TranslationFunction } from "./types";
 
 const cache = new Map<Locale, Translations>();
 
-function getNestedValue(obj: any, path: string): string {
+function getNestedValue(obj: Record<string, unknown>, path: string): string {
   const keys = path.split(".");
-  let value = obj;
+  let value: unknown = obj;
+
   for (const key of keys) {
-    value = value?.[key];
-    if (value === undefined) return path;
+    if (typeof value !== "object" || value === null || Array.isArray(value)) {
+      return path;
+    }
+
+    value = (value as Record<string, unknown>)[key];
+    if (value === undefined) {
+      return path;
+    }
   }
+
   return typeof value === "string" ? value : path;
 }
 
@@ -24,9 +32,9 @@ export function useTranslationsClient(locale: Locale): TranslationFunction {
       return;
     }
 
-    fetch(`/i18n/${locale}.json`)
+    fetch(`/locale/${locale}.json`)
       .then((res) => res.json())
-      .then((data) => {
+      .then((data: Translations) => {
         cache.set(locale, data);
         setTranslations(data);
       })
