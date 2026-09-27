@@ -1,6 +1,6 @@
 export default function Loading() {
     return (
-      <div className="fixed inset-0 flex flex-col items-center justify-center bg-white bg-opacity-95 z-50">
+      <div className="fixed inset-0 flex flex-col items-center justify-center bg-[--bg-soft] bg-opacity-95 z-50">
         <div className="relative w-40 h-40">
        
           <div className="absolute inset-0 rounded-full border-4 border-[#003366] opacity-60"></div>
