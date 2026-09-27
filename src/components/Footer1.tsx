@@ -67,7 +67,7 @@ export default function Footer1() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-5 text-xs text-slate-300 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-          <p>© 2025. Secure, intelligent and resilient digital capability.</p>
+          <p>© 2026. Secure, intelligent and resilient digital capability.</p>
           <div className="flex items-center gap-3">
             <a href="https://diginfo.net" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 hover:text-white">diginfo.net <ArrowUpRight className="h-3.5 w-3.5" /></a>
             <a href="https://dgmagazine.net" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 hover:text-white">dgmagazine.net <ArrowUpRight className="h-3.5 w-3.5" /></a>
