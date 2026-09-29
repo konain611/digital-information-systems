@@ -1,5 +1,6 @@
-import { SitePage } from "@/components/site-page";
+import { MarketingPage } from "@/components/marketing-page";
+import { siteContent } from "@/lib/site-content";
 
 export default function ContactPage() {
-  return <SitePage slug="contact" locale="en" />;
+  return <MarketingPage {...siteContent.contact} />;
 }

@@ -51,16 +51,140 @@ function SectionHeading({
 function ImagePlaceholder({ label }: { label: string }) {
   return (
     <div className="flex h-full min-h-[240px] items-end justify-start rounded-lg border border-[var(--border)] bg-[radial-gradient(circle_at_top,_rgba(0,51,102,0.14),_transparent_58%)] p-6 shadow-sm">
-      <div className="rounded-full border border-[var(--border)] bg-white/80 px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.2em] text-[var(--muted)]">
+      <div className="rounded-full border border-[var(--border)] bg-[var(--surface)] px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.2em] text-[var(--muted)]">
         {label}
       </div>
     </div>
   );
 }
 
+function CorporateHomePage({ t }: { t: (key: string) => string }) {
+  const capabilities = [
+    ["resilience", "/what-we-do/cyber-resilience", ShieldCheck],
+    ["transformation", "/what-we-do/secure-digital-transformation", CloudCog],
+    ["modernization", "/what-we-do/cloud-platform-modernization", Cpu],
+    ["assurance", "/what-we-do/governance-risk-assurance", BadgeCheck],
+    ["intelligence", "/what-we-do/ai-intelligence-services", BrainCircuit],
+    ["education", "/what-we-do/education-workforce-development", GraduationCap],
+    ["innovation", "/what-we-do/technology-manufacturing-product-innovation", Wrench],
+    ["growth", "/what-we-do/business-continuity-growth-enablement", BriefcaseBusiness],
+  ].map(([key, href, icon]) => ({ key: String(key), href: String(href), icon }));
+  const outcomes = [
+    ["continuity", "/what-we-do/cyber-resilience", ShieldCheck],
+    ["intelligence", "/innovation/dgbrain-ai-intelligence-engine", BrainCircuit],
+    ["innovation", "/innovation/product-engineering", Cpu],
+    ["growth", "/what-we-do/business-continuity-growth-enablement", Layers3],
+  ].map(([key, href, icon]) => ({ key: String(key), href: String(href), icon }));
+  const industries = [
+    ["government", "/industries/government-public-sector", Building2],
+    ["banking", "/industries/banking-finance", BriefcaseBusiness],
+    ["telecom", "/industries/telecom", Cpu],
+    ["healthcare", "/industries/healthcare", ShieldCheck],
+    ["education", "/industries/education", GraduationCap],
+    ["infrastructure", "/industries/critical-infrastructure", Wrench],
+    ["enterprise", "/industries/enterprise-technology", Layers3],
+    ["manufacturing", "/industries/manufacturing-industrial", Building2],
+  ].map(([key, href, icon]) => ({ key: String(key), href: String(href), icon }));
+  const principles = ["business", "cyber", "technology", "accountability", "research", "talent", "architecture", "ownership"];
+  const ecosystem = ["intelligence", "platforms", "research", "people"];
+  const insightCards = [
+    ["research", "/insights/research"],
+    ["perspectives", "/insights/executive-perspectives"],
+    ["cases", "/insights/case-studies"],
+    ["news", "/insights/news"],
+  ];
+
+  return (
+    <main className="bg-[var(--bg)] text-[var(--text)]">
+      <section className="relative overflow-hidden border-b border-[var(--border)]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(0,51,102,0.1),_transparent_35%)]" />
+        <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-24">
+          <div className="flex flex-col justify-center">
+            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--accent)]">{t("homepage.hero.eyebrow")}</p>
+            <h1 className="max-w-2xl text-4xl font-semibold tracking-[-0.06em] text-[var(--text)] sm:text-5xl lg:text-6xl">{t("homepage.hero.title")}</h1>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)]">{t("homepage.hero.body")}</p>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <LocalizedLink href="/contact/request-consultation" className="inline-flex items-center gap-2 rounded-md bg-[var(--accent)] px-5 py-3 text-sm font-medium text-white transition hover:opacity-95">{t("homepage.hero.primary")}<ArrowRight className="h-4 w-4" /></LocalizedLink>
+              <LocalizedLink href="/what-we-do" className="inline-flex items-center gap-2 rounded-md border border-[var(--border)] bg-[var(--surface)] px-5 py-3 text-sm font-medium text-[var(--text)] transition hover:border-[var(--accent)] hover:text-[var(--accent)]">{t("homepage.hero.secondary")}</LocalizedLink>
+            </div>
+          </div>
+          <div className="relative flex items-center">
+            <div className="absolute -left-12 top-8 h-24 w-24 rounded-full bg-[var(--accent-soft)] blur-3xl" />
+            <div className="relative w-full overflow-hidden rounded-lg border border-[var(--border)] bg-[var(--surface-strong)] p-4 shadow-sm sm:p-6">
+              <ImagePlaceholder label={t("homepage.hero.visualLabel")} />
+              <div className="grid grid-cols-2 gap-4 border-t border-[var(--border)] pt-5 sm:gap-8">
+                {["business", "technology", "intelligence", "trust"].map((key) => <div key={key} className="flex items-center gap-2 text-sm font-medium text-[var(--text)]"><span className="h-2 w-2 rounded-full bg-[var(--accent)]" />{t(`homepage.hero.${key}`)}</div>)}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[var(--bg-soft)] py-16 sm:py-20">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
+          <div><p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--accent)]">{t("homepage.challenge.eyebrow")}</p><h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-[var(--text)] sm:text-4xl">{t("homepage.challenge.title")}</h2></div>
+          <div><p className="text-base leading-8 text-[var(--muted)]">{t("homepage.challenge.body")}</p><div className="mt-6 flex flex-wrap gap-2">{["continuity", "risk", "modernization", "trust", "capability", "growth"].map((key) => <span key={key} className="rounded-md border border-[var(--border)] bg-[var(--surface)] px-3 py-2 text-sm font-medium text-[var(--text)]">{t(`homepage.challenge.${key}`)}</span>)}</div><LocalizedLink href="/what-we-do" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[var(--accent)] hover:underline">{t("homepage.challenge.link")}<ArrowRight className="h-4 w-4" /></LocalizedLink></div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <SectionHeading eyebrow={t("homepage.capabilities.eyebrow")} title={t("homepage.capabilities.title")} description={t("homepage.capabilities.body")} />
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          {capabilities.map(({ key, href, icon: Icon }) => <LocalizedLink key={key} href={href} className="rounded-lg border border-[var(--border)] bg-[var(--card)] p-5 shadow-sm transition hover:border-[var(--accent)]"><span className="mb-4 inline-flex rounded-md bg-[var(--accent-soft)] p-2.5 text-[var(--accent)]"><Icon className="h-5 w-5" /></span><h3 className="text-base font-semibold text-[var(--text)]">{t(`homepage.capabilities.${key}`)}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{t(`homepage.capabilities.${key}Text`)}</p></LocalizedLink>)}
+        </div>
+        <div className="mt-8 text-center"><LocalizedLink href="/what-we-do" className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--accent)] hover:underline">{t("homepage.capabilities.link")}<ArrowRight className="h-4 w-4" /></LocalizedLink></div>
+      </section>
+
+      <section className="bg-[var(--bg-soft)] py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><SectionHeading eyebrow={t("homepage.outcomes.eyebrow")} title={t("homepage.outcomes.title")} description={t("homepage.outcomes.body")} />
+          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">{outcomes.map(({ key, href, icon: Icon }) => <LocalizedLink key={key} href={href} className="rounded-lg border border-[var(--border)] bg-[var(--card)] p-6 shadow-sm transition hover:border-[var(--accent)]"><span className="mb-4 inline-flex rounded-md bg-[var(--accent-soft)] p-3 text-[var(--accent)]"><Icon className="h-5 w-5" /></span><h3 className="text-xl font-semibold text-[var(--text)]">{t(`homepage.outcomes.${key}`)}</h3><p className="mt-3 text-sm leading-7 text-[var(--muted)]">{t(`homepage.outcomes.${key}Text`)}</p></LocalizedLink>)}</div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="grid gap-10 rounded-lg border border-[var(--border)] bg-[var(--card)] p-7 shadow-sm md:p-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div><p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--accent)]">{t("homepage.dbrain.eyebrow")}</p><h2 className="text-3xl font-semibold tracking-tight text-[var(--text)] sm:text-4xl">DGBRAIN</h2><p className="mt-4 text-lg font-medium text-[var(--text)]">{t("homepage.dbrain.title")}</p><p className="mt-4 text-base leading-8 text-[var(--muted)]">{t("homepage.dbrain.body")}</p><blockquote className="mt-6 border-l-2 border-[var(--accent)] pl-4 text-lg font-semibold text-[var(--text)]">{t("homepage.dbrain.governance")}</blockquote><LocalizedLink href="/innovation/dgbrain-ai-intelligence-engine" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-[var(--accent)] hover:underline">{t("homepage.dbrain.link")}<ArrowRight className="h-4 w-4" /></LocalizedLink></div>
+          <div className="rounded-md bg-[var(--bg-soft)] p-6"><p className="text-sm font-semibold text-[var(--text)]">{t("homepage.dbrain.assistsTitle")}</p><ul className="mt-4 grid gap-3 sm:grid-cols-2">{["analytics", "search", "recommendations", "translation", "content", "decisionSupport"].map((key) => <li key={key} className="flex items-center gap-2 text-sm text-[var(--muted)]"><BadgeCheck className="h-4 w-4 shrink-0 text-[var(--accent)]" />{t(`homepage.dbrain.${key}`)}</li>)}</ul><p className="mt-5 border-t border-[var(--border)] pt-4 text-sm leading-6 text-[var(--muted)]">{t("homepage.dbrain.accountability")}</p></div>
+        </div>
+      </section>
+
+      <section className="bg-[var(--bg-soft)] py-16 sm:py-20"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><SectionHeading eyebrow={t("homepage.technology.eyebrow")} title={t("homepage.technology.title")} description={t("homepage.technology.body")} />
+        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-5">{[["DGLABS", "dglabs"], ["DIGINFO INNOVATECH", "innovatech"], ["NATIVESECURITY", "nativesecurity"], ["DG NSOS", "nsos"], [t("homepage.technology.engineeringTitle"), "engineering"]].map(([title, key]) => <div key={key} className="border-t-2 border-[var(--accent)] bg-[var(--card)] p-5"><h3 className="text-base font-semibold text-[var(--text)]">{title}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{t(`homepage.technology.${key}`)}</p></div>)}</div>
+        <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-semibold"><LocalizedLink href="/innovation" className="inline-flex items-center gap-2 text-[var(--accent)] hover:underline">{t("homepage.technology.innovationLink")}<ArrowRight className="h-4 w-4" /></LocalizedLink><LocalizedLink href="/ecosystem" className="inline-flex items-center gap-2 text-[var(--accent)] hover:underline">{t("homepage.technology.ecosystemLink")}<ArrowRight className="h-4 w-4" /></LocalizedLink></div>
+      </div></section>
+
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8"><SectionHeading eyebrow={t("homepage.industries.eyebrow")} title={t("homepage.industries.title")} description={t("homepage.industries.body")} />
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">{industries.map(({ key, href, icon: Icon }) => <LocalizedLink key={key} href={href} className="flex gap-4 rounded-lg border border-[var(--border)] bg-[var(--card)] p-5 transition hover:border-[var(--accent)]"><Icon className="mt-1 h-5 w-5 shrink-0 text-[var(--accent)]" /><span><span className="block text-sm font-semibold text-[var(--text)]">{t(`homepage.industries.${key}`)}</span><span className="mt-2 block text-sm leading-6 text-[var(--muted)]">{t(`homepage.industries.${key}Text`)}</span></span></LocalizedLink>)}</div>
+        <div className="mt-8 text-center"><LocalizedLink href="/industries" className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--accent)] hover:underline">{t("homepage.industries.link")}<ArrowRight className="h-4 w-4" /></LocalizedLink></div>
+      </section>
+
+      <section className="bg-[var(--bg-soft)] py-16 sm:py-20"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><SectionHeading eyebrow={t("homepage.ecosystem.eyebrow")} title={t("homepage.ecosystem.title")} description={t("homepage.ecosystem.body")} />
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">{ecosystem.map((key) => <div key={key} className="border-t-2 border-[var(--accent)] bg-[var(--card)] p-5"><h3 className="text-base font-semibold text-[var(--text)]">{t(`homepage.ecosystem.${key}`)}</h3><p className="mt-3 text-sm leading-6 text-[var(--muted)]">{t(`homepage.ecosystem.${key}Text`)}</p></div>)}</div>
+        <div className="mt-8 text-center"><LocalizedLink href="/ecosystem" className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--accent)] hover:underline">{t("homepage.ecosystem.link")}<ArrowRight className="h-4 w-4" /></LocalizedLink></div>
+      </div></section>
+
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8"><SectionHeading eyebrow={t("homepage.why.eyebrow")} title={t("homepage.why.title")} description={t("homepage.why.body")} />
+        <div className="mt-10 grid gap-x-8 md:grid-cols-2 xl:grid-cols-4">{principles.map((key) => <div key={key} className="border-t border-[var(--border)] py-5"><h3 className="text-base font-semibold text-[var(--text)]">{t(`homepage.why.${key}`)}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{t(`homepage.why.${key}Text`)}</p></div>)}</div>
+        <div className="mt-4 text-center"><LocalizedLink href="/who-we-are/about-diginfo" className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--accent)] hover:underline">{t("homepage.why.link")}<ArrowRight className="h-4 w-4" /></LocalizedLink></div>
+      </section>
+
+      <section className="bg-[var(--bg-soft)] py-16 sm:py-20"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><SectionHeading eyebrow={t("homepage.insights.eyebrow")} title={t("homepage.insights.title")} description={t("homepage.insights.body")} />
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-5">{insightCards.map(([key, href]) => <LocalizedLink key={key} href={href} className="rounded-lg border border-[var(--border)] bg-[var(--card)] p-5 transition hover:border-[var(--accent)]"><FileText className="h-5 w-5 text-[var(--accent)]" /><h3 className="mt-4 text-base font-semibold text-[var(--text)]">{t(`homepage.insights.${key}`)}</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{t(`homepage.insights.${key}Text`)}</p></LocalizedLink>)}<a href="https://dgmagazine.net/" target="_blank" rel="noreferrer" className="rounded-lg border border-[var(--border)] bg-[var(--card)] p-5 transition hover:border-[var(--accent)]"><BookOpen className="h-5 w-5 text-[var(--accent)]" /><h3 className="mt-4 text-base font-semibold text-[var(--text)]">DGMAGAZINE</h3><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{t("homepage.insights.magazineText")}</p></a></div>
+        <div className="mt-8 text-center"><LocalizedLink href="/insights" className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--accent)] hover:underline">{t("homepage.insights.link")}<ArrowRight className="h-4 w-4" /></LocalizedLink></div>
+      </div></section>
+
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8"><div className="flex flex-col gap-6 rounded-lg border border-[var(--border)] bg-[var(--card)] p-7 shadow-sm sm:p-9 md:flex-row md:items-center md:justify-between"><div className="max-w-3xl"><p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--accent)]">{t("homepage.evidence.eyebrow")}</p><h2 className="text-2xl font-semibold tracking-tight text-[var(--text)] sm:text-3xl">{t("homepage.evidence.title")}</h2><p className="mt-3 text-sm leading-7 text-[var(--muted)]">{t("homepage.evidence.body")}</p></div><div className="flex shrink-0 flex-wrap gap-4"><LocalizedLink href="/who-we-are/experience" className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--accent)] hover:underline">{t("homepage.evidence.experience")}<ArrowRight className="h-4 w-4" /></LocalizedLink><LocalizedLink href="/insights/case-studies" className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--accent)] hover:underline">{t("homepage.evidence.cases")}<ArrowRight className="h-4 w-4" /></LocalizedLink></div></div></section>
+
+      <section className="border-t border-[var(--border)] bg-[var(--bg-soft)] py-16 sm:py-20"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div className="rounded-lg border border-[var(--border)] bg-[var(--card)] p-8 shadow-sm md:p-12"><p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--accent)]">{t("homepage.cta.eyebrow")}</p><h2 className="max-w-3xl text-3xl font-semibold tracking-tight text-[var(--text)] sm:text-5xl">{t("homepage.cta.title")}</h2><p className="mt-5 max-w-2xl text-base leading-8 text-[var(--muted)]">{t("homepage.cta.body")}</p><div className="mt-8 flex flex-wrap items-center gap-4"><LocalizedLink href="/contact/request-consultation" className="inline-flex items-center gap-2 rounded-md bg-[var(--accent)] px-5 py-3 text-sm font-medium text-white transition hover:opacity-95">{t("homepage.cta.primary")}<ArrowRight className="h-4 w-4" /></LocalizedLink><LocalizedLink href="/company-profile" className="inline-flex items-center gap-2 rounded-md border border-[var(--border)] bg-[var(--surface)] px-5 py-3 text-sm font-medium text-[var(--text)] transition hover:border-[var(--accent)] hover:text-[var(--accent)]">{t("homepage.cta.profile")}</LocalizedLink><LocalizedLink href="/ecosystem" className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--accent)] hover:underline">{t("homepage.cta.ecosystem")}<ArrowRight className="h-4 w-4" /></LocalizedLink></div></div></div></section>
+    </main>
+  );
+}
+
 export default async function HomePage({ locale }: HomePageProps) {
   const t = await getTranslations(locale);
   const isRTL = locale === "ur" || locale === "ar";
+
+  if (locale === "en") return <CorporateHomePage t={t} />;
 
   const outcomes: CardItem[] = [
     { title: t("outcomes.continuityTitle"), description: t("outcomes.continuityDescription") },

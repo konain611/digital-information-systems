@@ -15,8 +15,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DIGINFO | Secure, intelligent and resilient digital capability",
-  description: "DIGINFO is a technology, cybersecurity, AI, cloud, R&D and enterprise assurance company building secure digital ecosystems.",
+  metadataBase: new URL("https://diginfo.net"),
+  title: {
+    default: "DIGINFO | Building Technology, AI Intelligence & Digital Trust",
+    template: "%s | DIGINFO",
+  },
+  description:
+    "DIGINFO helps organizations solve business challenges, secure operations, build intelligence, modernize technology and grow through a connected ecosystem of owned platforms, research, cloud, education and secure engineering.",
+  openGraph: {
+    title: "DIGINFO | Building Technology, AI Intelligence & Digital Trust",
+    description:
+      "DIGINFO helps organizations solve business challenges, secure operations, build intelligence, modernize technology and grow through a connected ecosystem of owned platforms, research, cloud, education and secure engineering.",
+    url: "https://diginfo.net",
+    siteName: "DIGINFO",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
